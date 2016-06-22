@@ -1,0 +1,11 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+h1 {
+	font: $header-font;
+}
+
+p {
+	font-family: $header-font;
+}
