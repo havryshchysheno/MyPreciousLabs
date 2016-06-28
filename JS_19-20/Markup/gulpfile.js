@@ -11,13 +11,15 @@ gulp.task ('sass', function () {
     return sass('src/sass/*styles.scss')
     .pipe(concat('styles.css'))
     .pipe(autoPrefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe(minifycss())
+    .pipe(minifycss({compatibility: 'ie8'}))
     .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('js', function() {
     gulp.src([
-            'src/js/*.js'
+            'src/js/jquery.js',
+            'src/js/slick.js',
+            'src/js/script.js'
         ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('dist/js'));
@@ -55,7 +57,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('test', function() {
-  return gulp.src('src/sass/*.scss')
+  return gulp.src('src/sass/styles.scss')
     .pipe(scsslint({'config': 'lint.yml',}));
 });
 

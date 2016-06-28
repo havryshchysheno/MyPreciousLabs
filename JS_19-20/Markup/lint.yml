@@ -20,3 +20,6 @@ linters:
     enabled: false
   NameFormat:
     enabled: false
+  NestingDepth:
+    enabled: true
+    max_depth: 4
