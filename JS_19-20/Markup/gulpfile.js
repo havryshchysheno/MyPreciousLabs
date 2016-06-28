@@ -5,6 +5,7 @@ var autoPrefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-clean-css');
 var server = require('gulp-server-livereload');
 var scsslint = require('gulp-scss-lint');
+var uglify = require('gulp-uglifyjs');
 
 
 gulp.task ('sass', function () {
@@ -22,6 +23,7 @@ gulp.task('js', function() {
             'src/js/script.js'
         ])
         .pipe(concat('app.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
