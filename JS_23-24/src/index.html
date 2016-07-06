@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script data-main = "js/config" src="js/require.js"></script>
+</head>
+<body>
+	<script type='text/template' id = "todo_wrapper">
+		<div class="wrapper">
+			<div class="to_do">
+				<div class="notepad">
+					<img src="img/up-part.png" alt="" class = "hinges">
+					<img src="img/cardboard.png" alt="" class = "cardboard"> 
+				</div>
+				<div class="input_group">
+					<div class="head">
+						<input type="text" name="" id="" value = "Todo List" disabled class = "name">
+						<i class = "add_btn"></i>
+					</div>
+					<ul class = "list">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="list_tmpl">
+		<% for (var i = 0; i < data.length; i++) { %>
+		<li class = "list_item"><div class="checkbox-wrapper"><span class = "custom-checkbox"><input type="checkbox" class = "list_chekbox" data-input = "<%= data[i] %>"></span></div><input type="text" class = "list_input" value = "<%= data[i] %>"></input><i class = "delete-btn" data-input = "<%= [i] %>"></i></li>
+		<% } %>
+	</script>
+</body>
+</html>
