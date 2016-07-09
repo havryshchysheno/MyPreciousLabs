@@ -1,0 +1,357 @@
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.wrapper {
+	width: 320px;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.header {
+	background: url('../img/header.jpg') top center no-repeat;
+	background-size: cover;
+	text-align: center;
+
+	&_container {
+		width: 320px;
+		margin: auto;
+		box-sizing: border-box;
+		//border: 1px solid red;
+	}
+
+	&_logo {
+		color: $main-color;
+		padding-top: 117px;
+		font-family: Montserrat;
+		font-weight: bold;
+		font-size: 20px;
+		letter-spacing: 1px;
+	}
+
+	&_buttons {
+		padding-top: 21px;
+		margin-left: -15px;
+	}
+
+	&_button {
+		@include button(transparent, $main-color, $main-color, 14px);
+		font-weight: bold;
+		padding: 8px 12px;
+		letter-spacing: 1px;
+
+		&--transparent {
+			border: none;
+		}
+
+		&--red {
+			background-color: $sub-color;
+			border: 2px solid $sub-color;
+			padding: 11px 50px;
+			letter-spacing: 0;
+		}
+	}
+
+	&_content {
+		color: $main-color;
+		padding-top: 32px;
+		padding-bottom: 135px;
+
+		&-tagline {
+			@include head (30px, $main-color);
+			text-transform: uppercase;
+			padding-bottom: 10px;
+			line-height: 35px;
+		}
+
+		&-text {
+			width: 230px;
+			margin: auto;
+			padding-bottom: 17px;
+			font-family: Roboto;
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+}
+
+.work{
+	padding: 0 10px;
+	padding-top: 38px;
+
+	&_head {
+		padding-left: 5px;
+		margin-bottom: 16px;
+		text-align: center;
+		@include head (22px, $header-color);
+	}
+
+	&_slider {
+		
+		position: relative;
+		margin-bottom: 10px;
+
+		&_container {
+			overflow: hidden;
+			position:relative;
+		}
+
+		&_item {
+			height: 240px;
+			width: 300px;
+			position: relative;
+			//margin: 0 10px 10px;
+
+		}
+
+		&_image {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+
+			&--tablet {
+				display: none;
+			}
+
+			&--desktop {
+				display: none;
+			}
+			
+		}
+		
+
+		&_content {
+			position: relative;
+			padding-left: 20px;
+			top: 70px;
+			z-index: 2;
+
+			&--top {
+				top: 100px;
+			}
+		}
+
+		&_button {
+			@include button($sub-color, $sub-color, $main-color, 10px);
+			padding: 2px 15px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			
+		}
+
+		&_head {
+			@include head (24px, $main-color);
+			width: 220px;
+			margin: 15px 0;
+			line-height: 30px;
+		}
+
+		&_text {
+			font-size: 14px;
+			font-family: Roboto;
+			color: $text-color;
+			line-height: 16px;
+		}
+
+		&_list:after {
+			content: ".";
+    			display: block;
+    			clear: both;
+    			visibility: hidden;
+    			line-height: 0;
+    			height: 0;
+		}
+	}
+}
+
+
+.partners {
+	text-align: center;
+	padding: 28px 20px;
+
+	&_head {
+		margin-bottom: 18px;
+		line-height: 24px;
+		@include head (22px, $header-color);
+
+	}
+
+	&_item {
+		margin-bottom: 30px;
+	}
+
+	&_name {
+		margin: 17px 0;
+		margin-left: -3px;
+		letter-spacing: 1px;
+		@include head (14px, $header-color);
+	}
+
+	&_text {
+		color: $text-color;
+		font-family: Roboto;
+		width: 220px;
+		margin: auto;
+		line-height: 15px;
+		font-size: 14px;
+	}
+	
+	&_img {
+		position: relative;
+		width: 125px;
+		margin: auto;
+	}
+
+	&_icon {
+		display: block;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		background-image: url('../img/sprite.png');
+		right: 0;
+		bottom: 0;
+
+		&--tv {
+			background-position:  -101px 0px;
+		}
+		
+		&--chem {
+			background-position: 0px -55px;
+		}
+
+		&--telegram {
+			background-position: -60px 0px;
+		}	
+
+		&--tea {
+			background-position: -41px -55px;
+		}
+	}
+
+	&_button {
+		@include button(transparent, $sub-color, $sub-color, 14px);
+		font-weight: bold;
+		margin-top: -8px;
+		padding: 10px 70px;	
+	}
+}
+
+.holidays {
+	padding-top: 7px;
+	text-align: center;
+	clear: both;
+	position: relative;
+	
+	&_head {
+		margin-left: 5px;
+		margin-bottom: 15px;
+		line-height: 25px;
+		@include head (22px, $header-color);
+	}
+
+	&_grid {
+  		min-height: 900px;
+  		margin-bottom: 35px;
+	}
+
+	&_item {
+		width: 300px;
+		height: 120px;
+		margin: auto;
+		margin-bottom: 10px;
+		border-radius:10px;
+		background-size: cover;
+		text-align: center;
+		line-height: 150px;
+		color: $main-color;
+		font-size: 22px;
+		font-family: Montserrat;
+		font-weight: bold;
+	}
+
+	&_input {
+		width: 280px;
+		height: 40px;
+		box-sizing: border-box;
+		padding-left: 15px;
+		margin: 20px 0 10px;
+		border-radius: 5px;
+		border: 1px solid darken(#fff, 30);
+		font-family: Roboto;
+		font-size: 14px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&_button {
+		@include button($sub-color, $sub-color, $main-color, 14px);
+		box-sizing: border-box;
+		padding: 7px 83px;
+		letter-spacing: 0px;
+	}
+
+	&_text {
+		font-family: Roboto;
+		font-size: 18px;
+	}
+}
+
+.footer {
+	border-top: 4px solid $sub-color;
+	box-sizing: border-box;
+	margin: auto;
+	width: 320px;
+	margin-top: 38px;
+	text-align: center;
+	padding-top: 20px;
+
+	&_head {
+		margin-bottom: 13px;
+		letter-spacing: 1px;
+		@include head (16px,  $sub-color);
+	}
+
+	&_sub-header {
+		@include head (14px,  $header-color);
+		margin-bottom: 5px;
+	}
+
+	&_partners {
+		@include head (14px,  $header-color);
+		margin-bottom: 5px;
+	}
+	
+	&_list {
+		overflow: hidden;
+		margin: auto;
+		margin-bottom: 15px;
+
+		&-item {
+			display: inline-block;
+			margin-left: 10px;
+		}
+
+		&-link {
+			font-family: Roboto;
+			font-size: 14px;
+			color: $text-color;
+			text-decoration: none;
+		}
+	}
+
+	&_design {
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 5px;
+		font-family: Montserrat;
+		font-weight: bold;
+		font-size: 10px;
+		color: lighten($text-color, 20);
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+}

@@ -1,0 +1,18 @@
+@mixin button ($background-color, $border-color, $font-color, $font-size) {
+	background-color: $background-color;
+	border: 2px solid $border-color;
+	border-radius: 25px;
+	cursor: pointer;
+	font-family: Montserrat;
+	font-size: $font-size;
+	color: $font-color;
+	outline: none;
+
+}
+
+@mixin head ($font-size, $font-color) {
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: $font-size;
+	color: $font-color;
+}

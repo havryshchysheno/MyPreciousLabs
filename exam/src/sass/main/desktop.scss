@@ -1,0 +1,151 @@
+.wrapper {
+	width: 940px;
+}
+
+.header {
+	width: 1440px;
+	margin: auto;
+
+	&_container {
+		width: 940px;
+		margin: auto;
+	}
+
+	&_buttons {
+		margin-right: 1px;
+		margin-top: 16px;
+	}
+
+	&_button {
+		letter-spacing: normal;
+		padding: 8px 15px;
+
+		&--red {
+			padding: 10px 24px;
+		}
+	}
+
+	&_logo {
+		padding-left: 0;
+		padding-top: 49px;
+	}
+}
+
+.work {
+	padding: 38px 0;
+	padding-top: 98px;
+
+
+	&_head {
+		padding-left: 0;
+	}
+
+	&_slider {
+		width: 300px;
+		height: 400px;
+
+		&-nav-prev {
+			top: 152px;
+		}
+
+		&-nav-next {
+			top: 152px;
+		}
+
+		&_content {
+				top: 230px;
+
+				&--top {
+					top: 259px;
+				}
+		}
+
+		&_head {
+			margin-bottom: 10px;
+		}
+
+		&_text {
+			width: 270px;
+		}
+
+		&_button {
+			padding: 1px 12px;
+			letter-spacing: 1.5px;
+		}
+
+		&_image {
+			&--tablet {
+				display: none;
+			}
+
+			&--desktop {
+				display: block;
+			}
+		}
+
+	}
+}
+
+.partners {
+	padding: 0;
+	padding-top: 50px;
+
+	&_list {
+		margin-left: 2px;
+	}
+
+	&_name {
+		margin-bottom: 12px;
+	}
+
+	&_item {
+		margin-right: 23px;
+		margin-bottom: 35px;
+		line-height: normal;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	&_button {
+		margin-top: 5px;
+	}
+}
+
+.holidays {
+	padding-top: 98px;
+
+	&_head {
+		margin-left: 0;
+		margin-bottom: 35px;
+	}
+
+	&_grid {
+		padding: 0;
+	}
+
+	&_item {
+		width: 300px;
+		height: 310px;
+
+		&--lg {
+			width: 620px;
+		}
+	}
+}
+
+.footer {
+	padding-left: 250px;
+	padding-right: 250px;
+	width: 1440px;
+
+	&_company {
+		margin-left: 95px;
+	}
+
+	&_partners {
+		margin-left: 91px;
+	}
+}

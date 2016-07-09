@@ -1,0 +1,268 @@
+@import '../../mq';
+
+@media #{$tablet} {
+    @import '../mobile';
+
+
+	.wrapper {
+		width: 768px;
+	}
+
+    	.header {
+		padding-bottom: 98px;
+
+    		&_container {
+    			width: 768px;
+    		}
+
+    		&_buttons {
+    			float: right;
+    			margin-top: 18px;
+    			margin-right: 48px;
+    		}
+
+    		&_logo {
+    			float: left;
+    			padding-top: 50px;
+    			padding-left: 50px;
+    		}
+
+    		&_button {
+    			&--red {
+    				padding: 9px 23px;
+    			}
+    		}
+
+    		&_content {
+			clear: both;
+			width: 520px;
+			margin: auto;
+			padding-top: 140px;
+
+			&-tagline {
+				font-size: 52px;
+				line-height: normal;
+			}
+
+			&-text {
+				margin-top: 18px;
+				margin-bottom: 20px;
+				width: auto;
+				font-size: 24px;
+			}
+    		}
+    	}
+
+    	.work {
+		overflow: hidden;
+		padding-top: 98px;
+		margin-left: 2px;
+
+		&_head {
+			padding-left: 7px;
+			margin-bottom: 35px;
+		}
+
+    		&_slider {
+			width: 236px;
+			float: left;
+			margin-right: 19px;
+			position: relative;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&_item {
+				min-height: 400px;
+				width: 235px;
+			}
+			
+			&-nav-prev {
+				position: absolute;
+				top: 40px;
+				left: 15px;
+				z-index: 2;
+			}
+
+			&-nav-next {
+				position: absolute;
+				top: 40px;
+				right: 40px;
+				z-index: 2;
+
+			}
+
+			&-prev {
+				display: block;
+				width: 30px;
+				height: 55px;
+				background-image: url('../img/sprite.png');
+				z-index: 2;
+				
+			}
+
+			&-next {
+				display: block;
+				width: 30px;
+				height: 55px;
+				background-image: url('../img/sprite.png');
+				background-position: -30px 0px;
+				position: absolute;
+				z-index: 2;
+			}
+
+			&_content {
+				top: 215px;
+				margin-left: 2px;
+
+				&--top {
+					top: 260px;
+				}
+			}
+
+			&_image {
+				&--mobile {
+					display:none;
+				}
+				
+				&--desktop {
+					display:none;
+				}
+
+				&--tablet {
+					display: block;
+				}
+			}
+    		}
+    	}
+
+    	.partners {
+    		padding: 89px;
+    		//text-align: center;
+
+    		&_head {
+    			margin-bottom: 32px;
+    		}
+		
+		&_list {
+			margin-left: 60px;
+			overflow: hidden;
+		}
+
+    		&_item {
+    			float: left;
+    			margin-bottom: 58px;
+    			
+    			&--right {
+    				margin-right: 35px;
+    			}
+    			
+    		}
+
+    		&_name {
+    			letter-spacing: normal;
+    			margin-bottom: 15px;
+    		}
+
+    		&_text {
+    			margin-left: -3px;
+    		}
+
+    		&_button {
+    			margin-top: -13px;
+    			padding: 9px 27px;
+    		}
+    	}
+
+    	.holidays {
+		
+		&_head {
+			margin-bottom: 33px;
+		}
+
+    		&_grid {
+    			min-height: 970px;
+    			padding: 0 10px;
+    			margin-bottom: 95px;
+    		}
+
+    		&_item {
+    			float: left;
+			width: 235px;
+			height: 310px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+
+			&:nth-child(odd) {
+				margin-right: 0;
+			}
+
+			&:first-child {
+				margin-right: 20px;
+			}
+
+
+			&--lg {
+				width: 490px;
+			}
+		}
+
+		&_button {
+			padding: 11px 23px;
+		}
+
+		&_input {
+			width: 240px;
+			margin-left: -1px;
+			margin-top: 41px;
+			margin-right: 7px;
+		}
+    	}
+
+    	.footer {
+		margin-top: 90px;
+		padding-top: 38px;
+		padding-left: 40px;
+		padding-right: 40px;
+		overflow: hidden;
+		width: 768px;
+
+    		&_head {
+    			float: left;
+    		}
+
+    		&_company {
+    			float: left;
+    			margin-left: 82px;
+    		}
+
+    		&_partners {
+    			float: left;
+    			margin-left: 104px;
+    		}
+
+    		&_list {
+			text-align: left;
+			margin-top: 5px;
+    			&-item {
+    				display: block;
+    				margin-left: 0;
+    				margin-top: 9px;
+
+    			}
+    		}
+
+		&_design { 
+			margin-top: 2px;
+			margin-right: -5px;
+			text-align: right;
+		}
+
+    		&_logo {
+    			//margin-top: -15px;
+    			float: right;
+    		}
+    	}
+    
+}
