@@ -25,7 +25,18 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
         .pipe(rename('app.css'))
-        .pipe(cleanCSS())
+        //.pipe(cleanCSS())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('sassie8', function() {
+    return sass('src/sass/ie8.scss', { sourcemap: true, style: 'compact' })
+        .on('error', sass.logError)
+        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+        .pipe(rename('app.ie8.css'))
+        //.pipe(cleanCSS())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/css'));
 });
@@ -75,9 +86,10 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('default', function() {
-    gulp.start('pages', 'sass','fonts', 'images','sprite', 'js', 'webserver');
+    gulp.start('pages', 'sass', 'sassie8', 'fonts', 'images','sprite', 'js', 'webserver');
     gulp.watch('src/*.html', ['pages']);
     gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/sass/**/*.scss', ['sassie8']);
     gulp.watch('src/js/**/*.*', ['js']);
     gulp.watch('src/img/*.*', ['images']);
     gulp.watch('src/img/icons/*.*', ['sprite']);

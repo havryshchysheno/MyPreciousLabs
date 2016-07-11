@@ -1,0 +1,778 @@
+@import 'main/variables';
+@import 'main/mixins';
+
+
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.wrapper {
+	width: 320px;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.header {
+	background: url('../img/header.jpg') top center no-repeat;
+	background-size: cover;
+	text-align: center;
+
+	&_container {
+		width: 320px;
+		margin: auto;
+		box-sizing: border-box;
+		//border: 1px solid red;
+	}
+
+	&_logo {
+		padding-top: 117px;
+		color: $main-color;
+		font-family: Montserrat;
+		font-size: 20px;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+
+	&_buttons {
+		margin-left: -15px;
+		padding-top: 21px;
+	}
+
+	&_button {
+		@include button(transparent, $main-color, $main-color, 14px);
+		padding: 8px 12px;
+		font-weight: bold;
+		letter-spacing: 1px;
+
+		&--transparent {
+			border: 0;
+		}
+
+		&--red {
+			padding: 11px 50px;
+			border: 2px solid $sub-color;
+			background-color: $sub-color;
+			letter-spacing: 0;
+		}
+	}
+
+	&_content {
+		padding-top: 32px;
+		padding-bottom: 135px;
+		color: $main-color;
+
+		&-tagline {
+			@include head (30px, $main-color);
+			padding-bottom: 10px;
+			line-height: 35px;
+			text-transform: uppercase;
+		}
+
+		&-text {
+			width: 230px;
+			margin: auto;
+			padding-bottom: 17px;
+			font-family: Roboto;
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+}
+
+.work {
+	padding: 0 10px;
+	padding-top: 38px;
+
+	&_head {
+		@include head (22px, $header-color);
+		margin-bottom: 16px;
+		padding-left: 5px;
+		text-align: center;
+	}
+
+	&_slider {
+		position: relative;
+		margin-bottom: 10px;
+		overflow: hidden;
+
+		&_container {
+			position: relative;
+			overflow: hidden;
+		}
+
+		&_item {
+			position: relative;
+			width: 300px;
+			height: 240px;
+		}
+
+		&_image {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+
+			&--tablet {
+				display: none;
+			}
+
+			&--desktop {
+				display: none;
+			}
+		}
+
+		&_content {
+			position: relative;
+			top: 70px;
+			padding-left: 20px;
+			z-index: 2;
+
+			&--top {
+				top: 100px;
+			}
+		}
+
+		&_button {
+			@include button($sub-color, $sub-color, $main-color, 10px);
+			padding: 2px 15px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+
+		&_head {
+			@include head (24px, $main-color);
+			width: 220px;
+			margin: 15px 0;
+			line-height: 30px;
+		}
+
+		&_text {
+			color: $text-color;
+			font-family: Roboto;
+			font-size: 14px;
+			line-height: 16px;
+		}
+
+		&_list::after {
+			content: ".";
+    			display: block;
+    			clear: both;
+    			visibility: hidden;
+    			line-height: 0;
+    			height: 0;
+		}
+	}
+}
+
+
+.partners {
+	text-align: center;
+	padding: 28px 20px;
+
+	&_head {
+		margin-bottom: 18px;
+		line-height: 24px;
+		@include head (22px, $header-color);
+
+	}
+
+	&_item {
+		margin-bottom: 30px;
+	}
+
+	&_name {
+		margin: 17px 0;
+		margin-left: -3px;
+		letter-spacing: 1px;
+		@include head (14px, $header-color);
+	}
+
+	&_text {
+		color: $text-color;
+		font-family: Roboto;
+		width: 220px;
+		margin: auto;
+		line-height: 15px;
+		font-size: 14px;
+	}
+	
+	&_img {
+		position: relative;
+		width: 125px;
+		margin: auto;
+	}
+
+	&_icon {
+		display: block;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		background-image: url('../img/sprite.png');
+		right: 0;
+		bottom: 0;
+
+		&--tv {
+			background-position:  -101px 0px;
+		}
+		
+		&--chem {
+			background-position: 0px -55px;
+		}
+
+		&--telegram {
+			background-position: -60px 0px;
+		}	
+
+		&--tea {
+			background-position: -41px -55px;
+		}
+	}
+
+	&_button {
+		@include button(transparent, $sub-color, $sub-color, 14px);
+		font-weight: bold;
+		margin-top: -8px;
+		padding: 10px 70px;	
+	}
+}
+
+.holidays {
+	padding-top: 7px;
+	text-align: center;
+	clear: both;
+	position: relative;
+	
+	&_head {
+		margin-left: 5px;
+		margin-bottom: 15px;
+		line-height: 25px;
+		@include head (22px, $header-color);
+	}
+
+	&_grid {
+  		min-height: 900px;
+  		margin-bottom: 35px;
+	}
+
+	&_item {
+		width: 300px;
+		height: 120px;
+		margin: auto;
+		margin-bottom: 10px;
+		border-radius:10px;
+		background-size: cover;
+		text-align: center;
+		line-height: 150px;
+		color: $main-color;
+		font-size: 22px;
+		font-family: Montserrat;
+		font-weight: bold;
+	}
+
+	&_input {
+		width: 280px;
+		height: 40px;
+		box-sizing: border-box;
+		padding-left: 15px;
+		margin: 20px 0 10px;
+		border-radius: 5px;
+		border: 1px solid darken(#fff, 30);
+		font-family: Roboto;
+		font-size: 14px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&_button {
+		@include button($sub-color, $sub-color, $main-color, 14px);
+		box-sizing: border-box;
+		padding: 7px 83px;
+		letter-spacing: 0px;
+	}
+
+	&_text {
+		font-family: Roboto;
+		font-size: 18px;
+	}
+}
+
+.footer {
+	border-top: 4px solid $sub-color;
+	box-sizing: border-box;
+	margin: auto;
+	width: 320px;
+	margin-top: 38px;
+	text-align: center;
+	padding-top: 20px;
+
+	&_head {
+		margin-bottom: 13px;
+		letter-spacing: 1px;
+		@include head (16px,  $sub-color);
+	}
+
+	&_sub-header {
+		@include head (14px,  $header-color);
+		margin-bottom: 5px;
+	}
+
+	&_partners {
+		@include head (14px,  $header-color);
+		margin-bottom: 5px;
+	}
+	
+	&_list {
+		overflow: hidden;
+		margin: auto;
+		margin-bottom: 15px;
+
+		&-item {
+			display: inline-block;
+			margin-left: 10px;
+		}
+
+		&-link {
+			font-family: Roboto;
+			font-size: 14px;
+			color: $text-color;
+			text-decoration: none;
+		}
+	}
+
+	&_design {
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 5px;
+		font-family: Montserrat;
+		font-weight: bold;
+		font-size: 10px;
+		color: lighten($text-color, 20);
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+}
+@media (min-width: 700px) {
+		.wrapper {
+		width: 768px;
+	}
+
+    	.header {
+		padding-bottom: 98px;
+
+    		&_container {
+    			width: 768px;
+    		}
+
+    		&_buttons {
+    			float: right;
+    			margin-top: 18px;
+    			margin-right: 48px;
+    		}
+
+    		&_logo {
+    			float: left;
+    			padding-top: 50px;
+    			padding-left: 50px;
+    		}
+
+    		&_button {
+    			&--red {
+    				padding: 9px 23px;
+    			}
+    		}
+
+    		&_content {
+			clear: both;
+			width: 520px;
+			margin: auto;
+			padding-top: 140px;
+
+			&-tagline {
+				font-size: 52px;
+				line-height: normal;
+			}
+
+			&-text {
+				margin-top: 18px;
+				margin-bottom: 20px;
+				width: auto;
+				font-size: 24px;
+			}
+    		}
+    	}
+
+    	.work {
+		overflow: hidden;
+		padding-top: 98px;
+		margin-left: 2px;
+
+		&_head {
+			padding-left: 7px;
+			margin-bottom: 35px;
+		}
+
+    		&_slider {
+			width: 236px;
+			float: left;
+			margin-right: 19px;
+			position: relative;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&_item {
+				min-height: 400px;
+				width: 235px;
+			}
+			
+			&-nav-prev {
+				position: absolute;
+				top: 40px;
+				left: 15px;
+				z-index: 2;
+			}
+
+			&-nav-next {
+				position: absolute;
+				top: 40px;
+				right: 40px;
+				z-index: 2;
+
+			}
+
+			&-prev {
+				display: block;
+				width: 30px;
+				height: 55px;
+				background-image: url('../img/sprite.png');
+				z-index: 2;
+				
+			}
+
+			&-next {
+				display: block;
+				width: 30px;
+				height: 55px;
+				background-image: url('../img/sprite.png');
+				background-position: -30px 0px;
+				position: absolute;
+				z-index: 2;
+			}
+
+			&_content {
+				top: 215px;
+				margin-left: 2px;
+
+				&--top {
+					top: 260px;
+				}
+			}
+
+			&_image {
+				&--mobile {
+					display:none;
+				}
+				
+				&--desktop {
+					display:none;
+				}
+
+				&--tablet {
+					display: block;
+				}
+			}
+    		}
+    	}
+
+    	.partners {
+    		padding: 89px;
+    		//text-align: center;
+
+    		&_head {
+    			margin-bottom: 32px;
+    		}
+		
+		&_list {
+			margin-left: 60px;
+			overflow: hidden;
+		}
+
+    		&_item {
+    			float: left;
+    			margin-bottom: 58px;
+    			
+    			&--right {
+    				margin-right: 35px;
+    			}
+    			
+    		}
+
+    		&_name {
+    			letter-spacing: normal;
+    			margin-bottom: 15px;
+    		}
+
+    		&_text {
+    			margin-left: -3px;
+    		}
+
+    		&_button {
+    			margin-top: -13px;
+    			padding: 9px 27px;
+    		}
+    	}
+
+    	.holidays {
+		
+		&_head {
+			margin-bottom: 33px;
+		}
+
+    		&_grid {
+    			min-height: 970px;
+    			padding: 0 10px;
+    			margin-bottom: 95px;
+    		}
+
+    		&_item {
+    			float: left;
+			width: 235px;
+			height: 310px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+
+			&:nth-child(odd) {
+				margin-right: 0;
+			}
+
+			&:first-child {
+				margin-right: 20px;
+			}
+
+
+			&--lg {
+				width: 490px;
+			}
+		}
+
+		&_button {
+			padding: 11px 23px;
+		}
+
+		&_input {
+			width: 240px;
+			margin-left: -1px;
+			margin-top: 41px;
+			margin-right: 7px;
+		}
+    	}
+
+    	.footer {
+		margin-top: 90px;
+		padding-top: 38px;
+		padding-left: 40px;
+		padding-right: 40px;
+		overflow: hidden;
+		width: 768px;
+
+    		&_head {
+    			float: left;
+    		}
+
+    		&_company {
+    			float: left;
+    			margin-left: 82px;
+    		}
+
+    		&_partners {
+    			float: left;
+    			margin-left: 104px;
+    		}
+
+    		&_list {
+			text-align: left;
+			margin-top: 5px;
+    			&-item {
+    				display: block;
+    				margin-left: 0;
+    				margin-top: 9px;
+
+    			}
+    		}
+
+		&_design { 
+			margin-top: 2px;
+			margin-right: -5px;
+			text-align: right;
+		}
+
+    		&_logo {
+    			//margin-top: -15px;
+    			float: right;
+    		}
+    	}
+}
+
+@media (min-width: 1150px) {
+	.wrapper {
+		width: 1000px;
+	}
+
+	.header {
+		width: 1440px;
+		margin: auto;
+
+		&_container {
+			width: 940px;
+			margin: auto;
+		}
+
+		&_buttons {
+			margin-right: 1px;
+			margin-top: 16px;
+		}
+
+		&_button {
+			letter-spacing: normal;
+			padding: 8px 15px;
+
+			&--red {
+				padding: 10px 24px;
+			}
+		}
+
+		&_logo {
+			padding-left: 0;
+			padding-top: 49px;
+		}
+	}
+
+	.work {
+		padding: 38px 0;
+		padding-top: 98px;
+
+
+		&_head {
+			padding-left: 0;
+		}
+
+		&_slider {
+			width: 300px;
+			height: 400px;
+
+			&_item {
+				width: 300px;
+				float: left;
+			}
+
+			&-nav-prev {
+				top: 152px;
+			}
+
+			&-nav-next {
+				top: 152px;
+			}
+
+			&_content {
+					top: 230px;
+
+					&--top {
+						top: 259px;
+					}
+			}
+
+			&_head {
+				margin-bottom: 10px;
+			}
+
+			&_text {
+				width: 270px;
+			}
+
+			&_button {
+				padding: 1px 12px;
+				letter-spacing: 1.5px;
+			}
+
+			&_image {
+				&--tablet {
+					display: none;
+				}
+
+				&--desktop {
+					display: block;
+				}
+			}
+
+		}
+	}
+
+	.partners {
+		padding: 0;
+		padding-top: 50px;
+
+		&_list {
+			margin-left: 2px;
+		}
+
+		&_name {
+			margin-bottom: 12px;
+		}
+
+		&_item {
+			margin-right: 23px;
+			margin-bottom: 35px;
+			line-height: normal;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+		}
+
+		&_button {
+			margin-top: 5px;
+		}
+	}
+
+	.holidays {
+		padding-top: 98px;
+
+		&_head {
+			margin-left: 0;
+			margin-bottom: 35px;
+		}
+
+		&_grid {
+			padding: 0;
+		}
+
+		&_item {
+			width: 300px;
+			height: 310px;
+
+			&--lg {
+				width: 620px;
+			}
+		}
+	}
+
+	.footer {
+		padding-left: 250px;
+		padding-right: 250px;
+		width: 1440px;
+
+		&_company {
+			margin-left: 95px;
+		}
+
+		&_partners {
+			margin-left: 91px;
+		}
+	}
+
+}
